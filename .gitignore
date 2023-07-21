@@ -1,0 +1,26 @@
+# database
+db.sqlite3
+*.db
+*.sqlite3
+
+*.lfog
+*.pot
+*.pyc
+
+# ide
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# log
+*.log
+*.pid
+*.lock
+*.gz
+*.zip
+*.tar.gz
+*.egg-info/

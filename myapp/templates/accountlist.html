@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>회원 리스트</title>
+</head>
+<body>
+    <h1>Account List</h1>
+    <a href="/">메인</a>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>이메일</th>
+                <th>가입일</th>
+                <th>로그인</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for account in accountList %}
+                <tr>
+                    <td>{{account.user_id}}</td>
+                    <td>{{account.username}}</td>
+                    <td>{{account.email}}</td>
+                    <td>{{account.rdate | date:'y.m.d H:i:s' }}</td>
+                    <td>{{account.last_login | date:'y.m.d H:i:S'}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot></tfoot>
+
+        </table>
+    </div>
+
+</body>
+</html>
