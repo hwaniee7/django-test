@@ -1,13 +1,13 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+     {% extends 'common_css.html' %}
     <title>회원 리스트</title>
 </head>
+{% block content %}
 <body>
     <h1>Account List</h1>
     <a href="/">메인</a>
@@ -29,14 +29,14 @@
                     <td>{{account.username}}</td>
                     <td>{{account.email}}</td>
                     <td>{{account.rdate | date:'y.m.d H:i:s' }}</td>
-                    <td>{{account.last_login | date:'y.m.d H:i:S'}}</td>
+                    <td>{{account.last_login | date:'y.m.d H:i:s'}}</td>
                 </tr>
                 {% endfor %}
             </tbody>
             <tfoot></tfoot>
-
         </table>
     </div>
 
 </body>
+{% endblock %}
 </html>
